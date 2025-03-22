@@ -126,6 +126,11 @@ while not game_over:
     font = pygame.font.Font(None, 36)
     lives_text = font.render(f"Vidas: {player.lives}", True, WHITE)
     screen.blit(lives_text, (10, HEIGHT - 40))
+
+    font = pygame.font.Font(None, 36)  # Crear fuente
+    score_text = font.render(f"Puntuación: {player.score}", True, WHITE)  # Renderizar puntuación
+    screen.blit(score_text, (WIDTH - 200, HEIGHT - 40))  # Mostrar en pantalla
+
     
     pygame.display.flip()
-    clock.tick(10)
+    clock.tick(5)
